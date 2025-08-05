@@ -70,7 +70,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative inline-block">
             <img
-              src="/dng-40.jpg"
+              src="/DNG-40.jpg"
               alt="Trụ sở JapanWork"
               className="rounded-xl shadow-lg"
             />
