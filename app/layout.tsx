@@ -16,7 +16,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "JapanWork - Cơ Hội Làm Việc Tại Nhật Bản",
+  title: "Suleco - Cơ Hội Làm Việc Tại Nhật Bản",
   description:
     "Đơn vị hàng đầu trong lĩnh vực phái cử lao động sang Nhật Bản. Cầu nối đáng tin cậy giúp bạn hiện thực hóa ước mơ làm việc tại Nhật Bản.",
     generator: 'v0.dev'

@@ -65,7 +65,7 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        navy: "#1C3C64",
+        navy: "#00235B",
         "navy-dark": "#1C3C80",
         red: "#A21C3E",
         "red-dark": "#8b1538",
