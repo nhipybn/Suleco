@@ -4,34 +4,37 @@ export default function ProcessSection() {
   const processSteps = [
     {
       icon: FileText,
-      title: "Tư vấn & Đăng ký",
-      description: "Tư vấn miễn phí về ngành nghề phù hợp, điều kiện, quy trình. Đăng ký hồ sơ và ký hợp đồng.",
+      title: "受入ニーズのヒアリング",
+      description: "採用ニーズや人数を確認します。",
     },
     {
       icon: CheckCircle,
-      title: "Kiểm tra sức khỏe",
-      description:
-        "Khám sức khỏe tổng quát tại các bệnh viện được chỉ định. Đảm bảo đủ điều kiện sức khỏe để làm việc.",
+      title: "候補者の推薦・書類選考",
+      description: "全国から適した候補者を選定します。",
     },
     {
       icon: BookOpen,
-      title: "Đào tạo tiếng Nhật",
-      description: "Học tiếng Nhật từ cơ bản đến nâng cao (6-12 tháng). Đạt trình độ N4-N3 theo yêu cầu của đối tác.",
+      title: "オンライン/現地面接",
+      description:
+        "オンラインまたはベトナム現地で面接を実施。日本側は面接時に選考結果を通知します。",
     },
     {
       icon: Users,
-      title: "Phỏng vấn & Tuyển chọn",
-      description: "Tham gia phỏng vấn với đại diện công ty Nhật Bản. Hỗ trợ chuẩn bị và luyện tập phỏng vấn.",
+      title: "教育・訓練（約4〜6ヶ月）",
+      description:
+        "日本語、文化、専門技能を中心とした研修を実施します。",
     },
     {
       icon: FileText,
-      title: "Làm hồ sơ Visa",
-      description: "Chuẩn bị và nộp hồ sơ xin visa làm việc. Hỗ trợ hoàn thiện thủ tục pháp lý cần thiết.",
+      title: "書類手続き・ビザ申請",
+      description:
+        "ビザ申請の書類準備をサポートします。受入企業と連携して手続きを進めます。",
     },
     {
       icon: Plane,
-      title: "Xuất cảnh",
-      description: "Hướng dẫn thủ tục xuất cảnh, đón tiếp tại sân bay Nhật Bản và hỗ trợ ổn định cuộc sống ban đầu.",
+      title: "出国・入国後フォロー",
+      description:
+        "出国手続きのサポート、来日後の生活や就労状況をフォローします。",
     },
   ]
 
@@ -39,8 +42,8 @@ export default function ProcessSection() {
     <section id="process" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4 font-noto">Quy Trình Tiếp Nhận</h2>
-          <p className="text-xl text-gray-600">6 bước đơn giản để bắt đầu hành trình sang Nhật Bản</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4 font-noto">受入れまでの流れ</h2>
+          <p className="text-xl text-gray-600">6ステップで簡単に開始できます</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

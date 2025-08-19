@@ -1,48 +1,30 @@
-import { Briefcase, Users, GraduationCap, Building, Globe, BookOpen } from "lucide-react"
+"use client"
 
 export default function ServicesSection() {
   const services = [
     {
-      icon: Briefcase,
-      title: "Kỹ thuật viên",
-      description: "Cơ khí, điện tử, ô tô, xây dựng. Yêu cầu có kinh nghiệm hoặc được đào tạo chuyên sâu.",
-      salary: "180,000 - 250,000 ¥/tháng",
-      duration: "3-5 năm",
+      img: "/Tts.jpeg", // ảnh cho 技能実習生
+      title: "技能実習生",
+      description: "製造、建設、農業、介護、食品加工などの分野での研修と派遣。",
+      duration: "1〜5年",
     },
     {
-      icon: Users,
-      title: "Lao động phổ thông",
-      description: "Sản xuất, đóng gói, nông nghiệp, thực phẩm. Phù hợp với người mới bắt đầu.",
-      salary: "150,000 - 200,000 ¥/tháng",
-      duration: "3-5 năm",
+      img: "/tts.jpg", // ảnh cho 特定技能
+      title: "特定技能",
+      description: "14分野での技能労働者を派遣。最長5年間勤務可能。",
+      duration: "最長5年",
     },
     {
-      icon: GraduationCap,
-      title: "Chăm sóc sức khỏe",
-      description: "Điều dưỡng, chăm sóc người già. Cần có bằng cấp chuyên môn và tiếng Nhật tốt.",
-      salary: "200,000 - 300,000 ¥/tháng",
-      duration: "5 năm",
+      img: "/tts1.jpg", // ảnh cho エンジニア・技術者
+      title: "エンジニア・技術者",
+      description: "ベトナムの30以上の大学からエンジニアを選抜し派遣。専攻は機械、IT、建設など。",
+      duration: "制限なし",
     },
     {
-      icon: Building,
-      title: "Xây dựng",
-      description: "Thợ hàn, thợ mộc, thợ sơn, công nhân xây dựng. Yêu cầu sức khỏe tốt và kỹ năng chuyên môn.",
-      salary: "170,000 - 230,000 ¥/tháng",
-      duration: "3-5 năm",
-    },
-    {
-      icon: Globe,
-      title: "Dịch vụ",
-      description: "Nhà hàng, khách sạn, bán lẻ. Cần giao tiếp tiếng Nhật tốt và kỹ năng phục vụ khách hàng.",
-      salary: "160,000 - 220,000 ¥/tháng",
-      duration: "3-5 năm",
-    },
-    {
-      icon: BookOpen,
-      title: "Nông nghiệp",
-      description: "Trồng trọt, chăn nuôi, thu hoạch. Phù hợp với người có kinh nghiệm nông nghiệp.",
-      salary: "140,000 - 180,000 ¥/tháng",
-      duration: "3 năm",
+      img: "/icons/kaigo.png", // ảnh cho 介護福祉士
+      title: "介護福祉士",
+      description: "日本語と介護スキルの専門教育プログラム。介護福祉士資格試験の合格を支援。",
+      duration: "5年",
     },
   ]
 
@@ -50,36 +32,41 @@ export default function ServicesSection() {
     <section id="services" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4 font-noto">Dịch Vụ Phái Cử</h2>
-          <p className="text-xl text-gray-600">Đa dạng ngành nghề với mức lương hấp dẫn</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-red mb-4 font-noto">
+            人材派遣プログラム
+          </h2>
+          <p className="text-xl text-gray-600">
+            多様な職種 – 専門的な研修 – 日本での就労チャンス
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon
-            return (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="w-16 h-16 bg-navy/10 rounded-xl flex items-center justify-center mb-6">
-                  <IconComponent className="w-8 h-8 text-navy" />
-                </div>
-                <h3 className="text-xl font-semibold text-navy mb-4 font-noto">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Mức lương:</span>
-                    <span className="font-semibold text-red">{service.salary}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Thời gian:</span>
-                    <span className="font-semibold">{service.duration}</span>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-2 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+            >
+              {/* Ảnh lớn hơn và bo góc */}
+<div className="w-full h-40 mx-auto mb-2">
+  <img
+    src={service.img}
+    alt={service.title}
+    className="w-full h-full object-cover rounded-xl shadow-md"
+  />
+</div>
+
+              <h3 className="text-xl font-semibold text-red mb-4 font-noto text-center">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4 text-center">
+                {service.description}
+              </p>
+              <div className="flex justify-between text-sm">
+                <span className="text-gray-600">期間:</span>
+                <span className="font-semibold">{service.duration}</span>
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -12,64 +12,24 @@ export default function Footer() {
                 <Globe className="w-6 h-6 text-navy" />
               </div>
               <div>
-                <span className="text-xl font-bold font-noto">JapanWork</span>
-                <div className="text-xs opacity-75">Cầu nối đến Nhật Bản</div>
+                <span className="text-xl font-bold font-noto">SULECO</span>
+                <div className="text-xs opacity-75">Chuyên nhận thực tập sinh, kỹ năng đặc định và nhân lực kỹ thuật</div>
               </div>
             </div>
             <p className="text-sm opacity-75 mb-4">
-              Đơn vị hàng đầu trong lĩnh vực phái cử lao động sang Nhật Bản với hơn 15 năm kinh nghiệm.
+              Công ty cổ phần SULECO, thành lập từ 1981, tiên phong trong lĩnh vực phái cử nhân lực sang Nhật Bản.
             </p>
-            <div className="flex space-x-3">
-              <a
-                href="#"
-                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
-              >
-                <span className="text-xs">FB</span>
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
-              >
-                <span className="text-xs">YT</span>
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
-              >
-                <span className="text-xs">ZL</span>
-              </a>
-            </div>
           </div>
 
           {/* Dịch vụ */}
           <div>
             <h4 className="font-semibold mb-4 font-noto">Dịch Vụ</h4>
             <ul className="space-y-2 text-sm opacity-75">
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Phái cử kỹ thuật viên
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Lao động phổ thông
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Chăm sóc sức khỏe
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Xây dựng
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Nông nghiệp
-                </a>
-              </li>
+              <li>Phái cử kỹ thuật viên</li>
+              <li>Lao động phổ thông</li>
+              <li>Chăm sóc sức khỏe</li>
+              <li>Xây dựng</li>
+              <li>Nông nghiệp</li>
             </ul>
           </div>
 
@@ -77,48 +37,35 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 font-noto">Hỗ Trợ</h4>
             <ul className="space-y-2 text-sm opacity-75">
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Tư vấn miễn phí
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Quy trình đăng ký
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Câu hỏi thường gặp
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Chính sách bảo mật
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
-                  Điều khoản sử dụng
-                </a>
-              </li>
+              <li>Tư vấn miễn phí</li>
+              <li>Quy trình đăng ký</li>
+              <li>Câu hỏi thường gặp</li>
+              <li>Chính sách bảo mật</li>
+              <li>Điều khoản sử dụng</li>
             </ul>
           </div>
 
           {/* Liên hệ */}
           <div>
-            <h4 className="font-semibold mb-4 font-noto">Liên Hệ</h4>
+            <h4 className="font-semibold mb-2 font-noto">Liên Hệ</h4>
             <div className="space-y-2 text-sm opacity-75">
-              <p>📍 TP.HCM: 123 Đường ABC, Q.1</p>
-              <p>📍 Hà Nội: 456 Đường XYZ, Cầu Giấy</p>
-              <p>📞 Hotline: 1900-xxxx</p>
-              <p>✉️ Email: info@japanwork.vn</p>
+              <p>📍 Trụ sở chính | SULECO専門学校​</p>
+              <p>165 Dai Lo 3, Phuoc Long Ward, Ho Chi Minh City</p>
+              <p>Tel: (+84) (28) 38 227 229 | Phone: (+84) 919 791 943</p>
+              <p>Email: info@suleco.vn | Web: www.suleco.vn</p>
+
+              <p>📍 Nhật Bản - Văn phòng đại diện</p>
+              <p>愛知県名古屋市中村区名駅3-20-20 名駅錦ビル 6階</p>
+              <p>Email: sales@suleco.vn | Phone: +81 90 2939 6868</p>
+
+              
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-75">
-          <p>&copy; 2024 JapanWork. Tất cả quyền được bảo lưu.</p>
+          <p>© 1981–2025 SULECO Joint Stock Company. All Rights Reserved.</p>
+          <p>Kính mời liên hệ để được tư vấn về nhận thực tập sinh, kỹ năng đặc định, nhân lực kỹ thuật và chăm sóc sức khỏe.</p>
         </div>
       </div>
     </footer>

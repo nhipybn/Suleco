@@ -1,9 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import AboutSection from "./components/AboutSection"
+import Timeline from "./components/Timeline"
+import Infor from "./components/Infor"
+import Maps from "./components/Maps"
+import Maps2 from "./components/Maps2"
+import CarouselSection from "./components/CarouselSection"
 import AchievementsSection from "./components/AchievementsSection"
 import ServicesSection from "./components/ServicesSection"
 import ProcessSection from "./components/ProcessSection"
@@ -35,8 +42,14 @@ export default function JapanDispatchLanding() {
     <div className="min-h-screen bg-white font-roboto">
       <Header isScrolled={isScrolled} scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} className="pt-0" />
-      <AboutSection />
+     <Infor/>
+     <Maps/>
+     
+      
+      <Timeline />
+      
       <AchievementsSection />
+      <CarouselSection />
       <ServicesSection />
       <ProcessSection />
       <TrainingSection />

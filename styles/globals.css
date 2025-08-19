@@ -88,3 +88,25 @@
     @apply bg-background text-foreground;
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes scrollTimeline {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Animation chạy nhanh hơn và mượt hơn */
+  .animate-scroll-timeline {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollTimeline 5s linear infinite; /* chỉnh 5s để nhanh hơn */
+  }
+}
+

@@ -1,56 +1,62 @@
-import { Check, BookOpen, Users, Home } from "lucide-react"
+"use client";
+
+import { Check, BookOpen, Users, Home } from "lucide-react";
 
 export default function TrainingSection() {
   const trainingFeatures = [
     {
-      title: "Tiếng Nhật cơ bản đến nâng cao",
-      description: "Từ Hiragana, Katakana đến Kanji. Luyện nghe, nói, đọc, viết. Mục tiêu đạt N4-N3.",
+      title: "包括的な研修プログラム",
+      description: "最新の施設で、専門的かつ体系的な教育を提供。",
     },
     {
-      title: "Kỹ năng chuyên môn",
-      description: "Đào tạo kỹ thuật theo từng ngành nghề: cơ khí, điện tử, xây dựng, nông nghiệp...",
+      title: "日本語研修 N5〜N3",
+      description: "初級から上級まで、聞く・話す・読む・書くの4技能を習得。",
     },
     {
-      title: "Văn hóa & Phép tắc xã hội",
-      description: "Tìm hiểu văn hóa Nhật Bản, cách ứng xử, làm việc nhóm, quy tắc an toàn lao động.",
+      title: "介護（Kaigo）プログラム",
+      description: "日本の教材と日本人講師による専門教育。",
     },
     {
-      title: "Kỹ năng sống",
-      description: "Hướng dẫn sinh hoạt hàng ngày, mua sắm, giao thông, y tế, ngân hàng tại Nhật Bản.",
+      title: "寄宿舎完備",
+      description: "男女別の安全で清潔な宿泊施設を提供。",
     },
-  ]
+    {
+      title: "専門教室・実習室",
+      description: "Kaigo実習や専門分野の授業に対応。",
+    },
+  ];
 
   const facilities = [
     {
       icon: BookOpen,
-      title: "20+ Phòng học",
-      description: "Trang bị máy chiếu, âm thanh hiện đại, điều hòa đầy đủ",
+      title: "教室",
+      description: "プロジェクター・音響設備・空調完備",
     },
     {
       icon: Users,
-      title: "Phòng thực hành",
-      description: "Mô phỏng môi trường làm việc thực tế tại Nhật Bản",
+      title: "実習室",
+      description: "日本の職場環境を模擬した演習施設",
     },
     {
       icon: Home,
-      title: "Ký túc xá",
-      description: "Chỗ ở sạch sẽ, an toàn cho học viên xa nhà",
+      title: "寄宿舎",
+      description: "遠方からの受講生も安心・安全に滞在可能",
     },
-  ]
+  ];
 
   return (
     <section id="training" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4 font-noto">
-            Chương Trình Đào Tạo & Cơ Sở Vật Chất
+            研修プログラムと施設
           </h2>
-          <p className="text-xl text-gray-600">Đào tạo chuyên nghiệp với cơ sở vật chất hiện đại</p>
+          <p className="text-xl text-gray-600">包括的な研修と最新の施設</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6 font-noto">Chương Trình Đào Tạo</h3>
+            <h3 className="text-2xl font-bold text-navy mb-6 font-noto">研修内容</h3>
             <div className="space-y-6">
               {trainingFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -69,18 +75,18 @@ export default function TrainingSection() {
           <div>
             <img
               src="/placeholder.svg?height=400&width=600&text=Training+Facility"
-              alt="Cơ sở đào tạo"
+              alt="研修施設"
               className="rounded-xl shadow-lg mb-6"
             />
             <div className="grid grid-cols-2 gap-4">
               <img
                 src="/placeholder.svg?height=150&width=200&text=Classroom"
-                alt="Phòng học"
+                alt="教室"
                 className="rounded-lg shadow-sm"
               />
               <img
                 src="/placeholder.svg?height=150&width=200&text=Lab"
-                alt="Phòng thực hành"
+                alt="実習室"
                 className="rounded-lg shadow-sm"
               />
             </div>
@@ -88,10 +94,10 @@ export default function TrainingSection() {
         </div>
 
         <div className="bg-gray-50 p-8 rounded-xl">
-          <h3 className="text-2xl font-bold text-navy mb-6 text-center font-noto">Cơ Sở Vật Chất</h3>
+          <h3 className="text-2xl font-bold text-navy mb-6 text-center font-noto">施設概要</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {facilities.map((facility, index) => {
-              const IconComponent = facility.icon
+              const IconComponent = facility.icon;
               return (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -100,11 +106,11 @@ export default function TrainingSection() {
                   <h4 className="font-semibold text-navy mb-2">{facility.title}</h4>
                   <p className="text-gray-600 text-sm">{facility.description}</p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

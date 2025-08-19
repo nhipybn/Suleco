@@ -5,21 +5,21 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-gradient-to-r from-navy to-navy-dark text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-noto">Bắt Đầu Hành Trình Của Bạn</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-noto">お問い合わせ</h2>
           <p className="text-xl opacity-90">
-            Đừng để cơ hội trôi qua! Liên hệ ngay để được tư vấn miễn phí và chi tiết
+            無料相談・詳細情報をご希望の方は、今すぐご連絡ください。
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form liên hệ */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-6 font-noto">Đăng Ký Tư Vấn Miễn Phí</h3>
+            <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
             <form className="space-y-4">
               <div>
                 <input
                   type="text"
-                  placeholder="Họ và tên *"
+                  placeholder="氏名 *"
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
                   required
                 />
@@ -27,7 +27,7 @@ export default function ContactSection() {
               <div>
                 <input
                   type="tel"
-                  placeholder="Số điện thoại *"
+                  placeholder="電話番号 *"
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
                   required
                 />
@@ -35,38 +35,26 @@ export default function ContactSection() {
               <div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="メールアドレス"
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
                 />
               </div>
               <div>
                 <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white/50">
                   <option value="" className="text-gray-800">
-                    Chọn ngành nghề quan tâm
+                    ご関心の職種を選択してください
                   </option>
-                  <option value="ky-thuat" className="text-gray-800">
-                    Kỹ thuật viên
-                  </option>
-                  <option value="lao-dong" className="text-gray-800">
-                    Lao động phổ thông
-                  </option>
-                  <option value="cham-soc" className="text-gray-800">
-                    Chăm sóc sức khỏe
-                  </option>
-                  <option value="xay-dung" className="text-gray-800">
-                    Xây dựng
-                  </option>
-                  <option value="dich-vu" className="text-gray-800">
-                    Dịch vụ
-                  </option>
-                  <option value="nong-nghiep" className="text-gray-800">
-                    Nông nghiệp
-                  </option>
+                  <option value="ky-thuat" className="text-gray-800">技術者</option>
+                  <option value="lao-dong" className="text-gray-800">一般労働者</option>
+                  <option value="cham-soc" className="text-gray-800">介護・福祉</option>
+                  <option value="xay-dung" className="text-gray-800">建設</option>
+                  <option value="dich-vu" className="text-gray-800">サービス業</option>
+                  <option value="nong-nghiep" className="text-gray-800">農業</option>
                 </select>
               </div>
               <div>
                 <textarea
-                  placeholder="Ghi chú thêm (tuổi, kinh nghiệm, mong muốn...)"
+                  placeholder="追加情報（年齢、経験、希望など）"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50 resize-none"
                 ></textarea>
@@ -75,7 +63,7 @@ export default function ContactSection() {
                 type="submit"
                 className="w-full bg-red text-white px-6 py-4 rounded-lg hover:bg-red-dark transition-all duration-300 transform hover:-translate-y-1 font-medium text-lg flex items-center justify-center"
               >
-                Gửi thông tin đăng ký
+                送信
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </form>
@@ -83,62 +71,57 @@ export default function ContactSection() {
 
           {/* Thông tin liên hệ */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 font-noto">Thông Tin Liên Hệ</h3>
+            <h3 className="text-2xl font-bold mb-6 font-noto">お問い合わせ先</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Trụ sở chính</h4>
-                  <p className="opacity-90">123 Đường ABC, Quận 1, TP.HCM</p>
-                  <p className="opacity-90">456 Đường XYZ, Quận Cầu Giấy, Hà Nội</p>
+                  <h4 className="font-semibold mb-2">本社 | SULECO専門学校</h4>
+                  <p className="opacity-90">165 Dai Lo 3, Phuoc Long Ward, Ho Chi Minh City</p>
+                  <p className="opacity-90">Tel: (+84) (28) 38 227 229</p>
+                  <p className="opacity-90">Phone: (+84) 919 791 943</p>
+                  <p className="opacity-90">Email: info@suleco.vn</p>
+                  <p className="opacity-90">Web: www.suleco.vn</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Hotline</h4>
-                  <p className="opacity-90">📞 1900-xxxx (miễn phí)</p>
-                  <p className="opacity-90">📱 0901-xxx-xxx</p>
+                  <h4 className="font-semibold mb-2">日本駐在員事務所</h4>
+                  <p className="opacity-90">愛知県名古屋市中村区名駅3-20-20 名駅錦ビル 6階</p>
+                  <p className="opacity-90">Email: sales@suleco.vn</p>
+                  <p className="opacity-90">Phone: +81 90 2939 6868</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="opacity-90">info@japanwork.vn</p>
-                  <p className="opacity-90">tuyensinh@japanwork.vn</p>
+                  <h4 className="font-semibold mb-2">SULECO 中部支店</h4>
+                  <p className="opacity-90">12 Phan Chu Trinh, Thuan Hoa Ward, Thua Thien Hue City</p>
+                  <p className="opacity-90">Phone: (+84) 979 070 330</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Giờ làm việc</h4>
-                  <p className="opacity-90">Thứ 2 - Thứ 6: 8:00 - 17:30</p>
-                  <p className="opacity-90">Thứ 7: 8:00 - 12:00</p>
+                  <h4 className="font-semibold mb-2">DA NANG 代理事務所</h4>
+                  <p className="opacity-90">236 Ly Thuong Kiet, Tam Ky Ward, Da Nang City</p>
+                  <p className="opacity-90">Phone: (+84) 911 671 639</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-white/10 rounded-xl">
-              <h4 className="font-semibold mb-4">Ưu đãi đặc biệt</h4>
-              <ul className="space-y-2 text-sm opacity-90">
-                <li>✅ Miễn phí tư vấn và định hướng nghề nghiệp</li>
-                <li>✅ Giảm 20% học phí cho 100 học viên đầu tiên</li>
-                <li>✅ Hỗ trợ vay vốn với lãi suất ưu đãi</li>
-                <li>✅ Cam kết hoàn tiền nếu không đậu visa</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
