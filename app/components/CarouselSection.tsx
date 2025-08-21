@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 
 const albums = [
   {
-    title: "Hợp tác chiến lược cùng tỉnh Tochigi",
+    title: "栃木県との戦略的パートナーシップ",
     images: [
       "/Tochigi.jpg",
       "/Tochigi1.jpg",
@@ -20,7 +20,7 @@ const albums = [
     ],
   },
   {
-    title: "Hiệp hội công nghiệp thương mại Otsu (Shiga)",
+    title: "滋賀県大津商工会議所",
     images: [
       "/Shiga.jpg",
       "/Shiga5.jpg",
@@ -31,7 +31,7 @@ const albums = [
     ],
   },
   {
-    title: "Tỉnh trưởng Nagasaki từng đến thăm Suleco",
+    title: "長崎県知事がスレコを公式訪問しました",
     images: [
       "/Nagasaki.jpg",
       "/Nagasaki7.jpg",
