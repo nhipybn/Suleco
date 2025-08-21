@@ -21,7 +21,7 @@ export default function ServicesSection() {
       duration: "制限なし",
     },
     {
-      img: "/icons/kaigo.png", // ảnh cho 介護福祉士
+      img: "/menu_index.jpg", // ảnh cho 介護福祉士
       title: "介護福祉士",
       description: "日本語と介護スキルの専門教育プログラム。介護福祉士資格試験の合格を支援。",
       duration: "5年",
