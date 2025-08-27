@@ -1,69 +1,128 @@
-import { Globe } from "lucide-react"
+"use client";
 
-export default function Footer() {
+import { MapPin } from "lucide-react";
+import Script from "next/script";
+
+export default function ContactSection() {
   return (
-    <footer className="bg-navy text-white py-12">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-r from-navy to-navy-dark text-white"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center space-x-4 py-2 pl-2">
-              <div className="w-full h-30 flex">
-            <img src="/logo-suleco.png" alt="Suleco Logo" className="h-20 w-40 object-contain" />
-              </div>
-             
-            </div>
-            <p className="text-sm opacity-75 mb-4">
-              SULECOは1981年設立以来、40年以上にわたりベトナム人材を日本へ送り出すパイオニアとして活動しています。
-            </p>
-          </div>
-
-          {/* サービス */}
-          <div>
-            <h4 className="font-semibold mb-4 font-noto">サービス</h4>
-            <ul className="space-y-2 text-sm opacity-75">
-              <li>技能実習生の派遣</li>
-              <li>特定技能人材の派遣</li>
-              <li>介護・看護人材</li>
-              <li>建設人材</li>
-              <li>農業人材</li>
-              <li>技術者派遣</li>
-            </ul>
-          </div>
-
-          {/* サポート */}
-          <div>
-            <h4 className="font-semibold mb-4 font-noto">サポート</h4>
-            <ul className="space-y-2 text-sm opacity-75">
-              <li>無料相談</li>
-              <li>登録の流れ</li>
-              <li>よくある質問</li>
-              <li>プライバシーポリシー</li>
-              <li>利用規約</li>
-            </ul>
-          </div>
-
-          {/* お問い合わせ */}
-          <div>
-            <h4 className="font-semibold mb-2 font-noto">お問い合わせ</h4>
-            <div className="space-y-2 text-sm opacity-75">
-              <p>📍 本社 | SULECO専門学校</p>
-              <p>165 Dai Lo 3, Phuoc Long Ward, Ho Chi Minh City</p>
-              <p>Tel: (+84) (28) 38 227 229 | Mobile: (+84) 919 791 943</p>
-              <p>Email: info@suleco.vn | Web: www.suleco.vn</p>
-
-              <p>📍 日本事務所（名古屋）</p>
-              <p>愛知県名古屋市中村区名駅3-20-20 名駅錦ビル6階</p>
-              <p>Email: sales@suleco.vn | Phone: +81 90 2939 6868</p>
-            </div>
-          </div>
+        {/* Tiêu đề */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-noto">
+            お問い合わせ
+          </h2>
+          <p className="text-xl opacity-90">
+            無料相談・詳細情報をご希望の方は、今すぐご連絡ください。
+          </p>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-75">
-          <p>© 1981–2025 SULECO株式会社. All Rights Reserved.</p>
-          <p>技能実習生、特定技能、技術者、介護人材のご相談はお気軽にお問い合わせください。</p>
+        {/* Grid 2 cột */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Form Bownow – cột trái */}
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+            <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
+
+            {/* Container Bownow */}
+            <div
+              id="_bownow_cs_form_d270596b7084f91ec4a5"
+              className="relative w-full [&>*]:m-0 [&>*]:p-0"
+            ></div>
+
+            {/* Nhúng script Bownow */}
+            <Script
+              id="_bownow_cs_sid_d270596b7084f91ec4a5"
+              strategy="afterInteractive"
+            >
+              {`
+                var _bownow_cs_sid_d270596b7084f91ec4a5 = document.createElement('script');
+                _bownow_cs_sid_d270596b7084f91ec4a5.charset = 'utf-8';
+                _bownow_cs_sid_d270596b7084f91ec4a5.src = 'https://contents.bownow.jp/forms/sid_d270596b7084f91ec4a5/trace.js';
+                document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_d270596b7084f91ec4a5);
+              `}
+            </Script>
+
+            {/* CSS override để fix form bị lệch */}
+            <style jsx global>{`
+              #_bownow_cs_form_d270596b7084f91ec4a5 iframe {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: block !important;
+              }
+            `}</style>
+          </div>
+
+          {/* Thông tin liên hệ – cột phải */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 font-noto">お問い合わせ先</h3>
+            <div className="space-y-6">
+              {/* 本社 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">本社 | SULECO専門学校</h4>
+                  <p className="opacity-90">
+                    165 Dai Lo 3, Phuoc Long Ward, Ho Chi Minh City
+                  </p>
+                  <p className="opacity-90">Tel: (+84) (28) 38 227 229</p>
+                  <p className="opacity-90">Phone: (+84) 919 791 943</p>
+                  <p className="opacity-90">Email: info@suleco.vn</p>
+                  <p className="opacity-90">Web: www.suleco.vn</p>
+                </div>
+              </div>
+
+              {/* 日本駐在員事務所 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">日本駐在員事務所</h4>
+                  <p className="opacity-90">
+                    愛知県名古屋市中村区名駅3-20-20 名駅錦ビル 6階
+                  </p>
+                  <p className="opacity-90">Email: sales@suleco.vn</p>
+                  <p className="opacity-90">Phone: +81 90 2939 6868</p>
+                </div>
+              </div>
+
+              {/* SULECO 中部支店 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">SULECO 中部支店</h4>
+                  <p className="opacity-90">
+                    12 Phan Chu Trinh, Thuan Hoa Ward, Thua Thien Hue City
+                  </p>
+                  <p className="opacity-90">Phone: (+84) 979 070 330</p>
+                </div>
+              </div>
+
+              {/* DA NANG 代理事務所 */}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">DA NANG 代理事務所</h4>
+                  <p className="opacity-90">
+                    236 Ly Thuong Kiet, Tam Ky Ward, Da Nang City
+                  </p>
+                  <p className="opacity-90">Phone: (+84) 911 671 639</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  )
+    </section>
+  );
 }
