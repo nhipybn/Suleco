@@ -22,7 +22,16 @@ export default function ContactSection() {
 
         {/* Grid 2 cột */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-         
+          
+          {/* Form Bownow – cột trái */}
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+  <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
+
+  <iframe
+    src="https://contents.bownow.jp/forms/sid_d270596b7084f91ec4a5/"
+    className="w-full h-[700px] border-0 rounded-lg"
+  ></iframe>
+</div>
 
           {/* Thông tin liên hệ – cột phải */}
           <div>
