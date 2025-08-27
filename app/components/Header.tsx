@@ -7,6 +7,18 @@ export default function Header({ scrollToSection }: { scrollToSection: (id: stri
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
+  // This useEffect block will safely add the tracking script
+  useEffect(() => {
+    // Check if the script has already been added to prevent duplicates
+    if (!document.getElementById('_bownow_ts')) {
+      const _bownow_ts = document.createElement('script');
+      _bownow_ts.id = '_bownow_ts';
+      _bownow_ts.charset = 'utf-8';
+      _bownow_ts.src = 'https://contents.bownow.jp/js/UTC_b02e8385e21bf0bf7fa4/trace.js';
+      document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
+    }
+  }, []); // The empty dependency array ensures this runs only once after the initial render
+
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 0)
@@ -29,7 +41,7 @@ export default function Header({ scrollToSection }: { scrollToSection: (id: stri
     { label: "サービス", sectionId: "services" },
     { label: "プロセス", sectionId: "process" },
     { label: "研修", sectionId: "training" },
-    { label: "受講者の声", sectionId: "testimonials" },
+    { label: "受講者の声", sectionId: "partner-video" },
     { label: "サポート", sectionId: "support" },
   ]
 
