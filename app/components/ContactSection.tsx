@@ -22,39 +22,7 @@ export default function ContactSection() {
 
         {/* Grid 2 cột */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form Bownow – cột trái */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
-
-            {/* Container Bownow */}
-            <div
-              id="_bownow_cs_form_d270596b7084f91ec4a5"
-              className="relative w-full [&>*]:m-0 [&>*]:p-0"
-            ></div>
-
-            {/* Nhúng script Bownow */}
-            <Script
-              id="_bownow_cs_sid_d270596b7084f91ec4a5"
-              strategy="afterInteractive"
-            >
-              {`
-                var _bownow_cs_sid_d270596b7084f91ec4a5 = document.createElement('script');
-                _bownow_cs_sid_d270596b7084f91ec4a5.charset = 'utf-8';
-                _bownow_cs_sid_d270596b7084f91ec4a5.src = 'https://contents.bownow.jp/forms/sid_d270596b7084f91ec4a5/trace.js';
-                document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_d270596b7084f91ec4a5);
-              `}
-            </Script>
-
-            {/* CSS override để fix form bị lệch */}
-            <style jsx global>{`
-              #_bownow_cs_form_d270596b7084f91ec4a5 iframe {
-                width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                display: block !important;
-              }
-            `}</style>
-          </div>
+         
 
           {/* Thông tin liên hệ – cột phải */}
           <div>
