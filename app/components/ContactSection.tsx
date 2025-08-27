@@ -1,4 +1,7 @@
-import { ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react"
+"use client";
+
+import { MapPin } from "lucide-react";
+import Script from "next/script";
 
 export default function ContactSection() {
   return (
@@ -12,61 +15,22 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form liên hệ */}
+          {/* Form Bownow */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
-            <form className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="氏名 *"
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="tel"
-                  placeholder="電話番号 *"
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="メールアドレス"
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50"
-                />
-              </div>
-              <div>
-                <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white/50">
-                  <option value="" className="text-gray-800">
-                    ご関心の職種を選択してください
-                  </option>
-                  <option value="ky-thuat" className="text-gray-800">技術者</option>
-                  <option value="lao-dong" className="text-gray-800">一般労働者</option>
-                  <option value="cham-soc" className="text-gray-800">介護・福祉</option>
-                  <option value="xay-dung" className="text-gray-800">建設</option>
-                  <option value="dich-vu" className="text-gray-800">サービス業</option>
-                  <option value="nong-nghiep" className="text-gray-800">農業</option>
-                </select>
-              </div>
-              <div>
-                <textarea
-                  placeholder="追加情報（年齢、経験、希望など）"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white/50 resize-none"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-red text-white px-6 py-4 rounded-lg hover:bg-red-dark transition-all duration-300 transform hover:-translate-y-1 font-medium text-lg flex items-center justify-center"
-              >
-                送信
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-            </form>
+            
+            {/* Đây là container để Bownow render form */}
+            <div id="_bownow_cs_form_d270596b7084f91ec4a5"></div>
+
+            {/* Nhúng script của Bownow */}
+            <Script id="_bownow_cs_sid_d270596b7084f91ec4a5" strategy="afterInteractive">
+              {`
+                var _bownow_cs_sid_d270596b7084f91ec4a5 = document.createElement('script');
+                _bownow_cs_sid_d270596b7084f91ec4a5.charset = 'utf-8';
+                _bownow_cs_sid_d270596b7084f91ec4a5.src = 'https://contents.bownow.jp/forms/sid_d270596b7084f91ec4a5/trace.js';
+                document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_d270596b7084f91ec4a5);
+              `}
+            </Script>
           </div>
 
           {/* Thông tin liên hệ */}
