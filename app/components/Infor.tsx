@@ -5,7 +5,7 @@ import { Building2, User2, Briefcase, Calendar, Layers, MapPin, Users, Network }
 
 export default function SulecoOverview() {
   return (
-    <section className="mx-auto max-w-7xl py-12 px-6 md:px-12">
+    <section id="about" className="mx-auto max-w-7xl py-12 px-6 md:px-12">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
         SULECO 概要情報
       </h2>
