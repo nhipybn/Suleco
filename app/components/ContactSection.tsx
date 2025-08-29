@@ -21,24 +21,26 @@ export default function ContactSection() {
         </div>
 
         {/* Grid 2 cột */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          {/* Iframe form BowNow */}
-          <div className="flex justify-center">
-            <iframe
-              allowTransparency={true}
-              frameBorder="0"
-              height="800"
-              id="_bownow_form_contents"
-              scrolling="yes"
-              src="https://contents.bownow.jp/forms/view?form_id=sid_757076642af3b3b48374"
-              style={{
-                border: "none",
-                overflow: "hidden",
-                width: "100%",
-                display: "block",
-              }}
-            />
-          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+  {/* Iframe form BowNow */}
+  <div className="bg-white rounded-2xl shadow-lg p-6">
+    <iframe
+      allowTransparency={true}
+      frameBorder="0"
+      height="800"
+      id="_bownow_form_contents"
+      scrolling="yes"
+      src="https://contents.bownow.jp/forms/view?form_id=sid_757076642af3b3b48374"
+      style={{
+        border: "none",
+        overflow: "hidden",
+        width: "100%",
+        display: "block",
+      }}
+    />
+  </div>
+</div>
+
 
           {/* Cột phải: Thông tin liên hệ */}
           <div>
