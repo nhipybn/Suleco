@@ -3,12 +3,15 @@ import { useEffect } from "react";
 
 export default function ContactSection() {
   useEffect(() => {
-    // Tạo script BowNow
-    const script = document.createElement("script");
-    script.id = "_bownow_cs_sid_757076642af3b3b48374";
-    script.charset = "utf-8";
-    script.src = "https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js";
-    document.head.appendChild(script);
+    // Check nếu script chưa được gắn thì mới gắn
+    if (!document.getElementById("_bownow_cs_sid_757076642af3b3b48374")) {
+      const script = document.createElement("script");
+      script.id = "_bownow_cs_sid_757076642af3b3b48374";
+      script.charset = "utf-8";
+      script.src =
+        "https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js";
+      document.head.appendChild(script);
+    }
   }, []);
 
   return (
@@ -34,8 +37,11 @@ export default function ContactSection() {
 
           {/* Cột phải: Form BowNow */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-black">
-            {/* Đây là nơi BowNow sẽ render form */}
-            <div id="sid_757076642af3b3b48374" className="min-h-[600px]"></div>
+            {/* Nơi BowNow render form */}
+            <div
+              id="sid_757076642af3b3b48374"
+              className="min-h-[600px]"
+            ></div>
           </div>
         </div>
       </div>
