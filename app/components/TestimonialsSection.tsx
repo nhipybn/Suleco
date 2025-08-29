@@ -15,7 +15,7 @@ export default function PartnerVideoSection() {
           <iframe
             width="800"
             height="450"
-            src="https://www.youtube.com/embed/VIDEO_ID" // Thay VIDEO_ID bằng link video thực tế
+            src="https://youtu.be/Zlj7HmdJHYQ?si=MLpvhd5q1XsK8sgN" // Thay VIDEO_ID bằng link video thực tế
             title="Cảm nhận của đối tác"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
