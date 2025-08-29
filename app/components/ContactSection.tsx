@@ -1,7 +1,6 @@
 "use client";
 
 import { MapPin } from "lucide-react";
-import Script from "next/script";
 
 export default function ContactSection() {
   return (
@@ -27,23 +26,18 @@ export default function ContactSection() {
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-            {/* Wrapper cố định chiều cao trước khi form load */}
-            <div className="min-h-[600px]">
-              <div id="_bownow_cs_form_sid_757076642af3b3b48374"></div>
+            {/* Form nhúng bằng iframe để tránh lỗi */}
+            <div className="aspect-[9/12] w-full">
+              <iframe
+                src="https://form.bownow.jp/forms/sid_757076642af3b3b48374"
+                width="100%"
+                height="100%"
+                style={{ border: "none" }}
+                loading="lazy"
+                title="BowNow form"
+                className="w-full h-[600px] rounded-lg"
+              ></iframe>
             </div>
-
-            {/* Script nhúng BowNow */}
-            <Script id="_bownow_cs_sid_757076642af3b3b48374" strategy="afterInteractive">
-              {`
-                (function(){
-                  var s = document.createElement('script');
-                  s.charset = 'utf-8';
-                  s.src = 'https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js';
-                  var e = document.getElementById('_bownow_cs_form_sid_757076642af3b3b48374');
-                  if (e) e.parentNode.insertBefore(s, e);
-                })();
-              `}
-            </Script>
           </div>
 
           {/* Thông tin liên hệ – cột phải */}
