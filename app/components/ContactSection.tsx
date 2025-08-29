@@ -28,7 +28,7 @@ export default function ContactSection() {
   <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
   <iframe
-  src="https://form.bownow.jp/forms/sid_d270596b7084f91ec4a5”
+  src="https://form.bownow.jp/forms/sid_757076642af3b3b48374”
 
   width="100%"
   height="600"
