@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { MapPin } from "lucide-react";
 
 export default function ContactSection() {
   useEffect(() => {
-    // Đảm bảo không gắn script nhiều lần
+    // Chỉ gắn script 1 lần duy nhất
     if (!document.getElementById("_bownow_loader")) {
       const script = document.createElement("script");
       script.id = "_bownow_loader";
@@ -37,7 +36,7 @@ export default function ContactSection() {
         <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
           <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-          {/* Đây là div đích mà BowNow sẽ render form */}
+          {/* Div để BowNow gắn form */}
           <div
             id="sid_757076642af3b3b48374"
             className="min-h-[600px] w-full"
