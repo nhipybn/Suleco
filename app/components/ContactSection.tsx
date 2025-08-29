@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function ContactSection() {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://contents.bownow.jp/js/iframe.js";
+    script.src = "https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js";
     script.async = true;
     document.body.appendChild(script);
   }, []);
