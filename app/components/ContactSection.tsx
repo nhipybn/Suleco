@@ -1,41 +1,49 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import Script from "next/script";
 
-export default function ContactForm() {
-  const formWrapperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Xoá script cũ nếu đã tồn tại
-    const oldScript = document.getElementById("_bownow_cs_sid_757076642af3b3b48374");
-    if (oldScript) oldScript.remove();
-
-    // Tạo script giữ nguyên cấu trúc BowNow cung cấp
-    const script = document.createElement("script");
-    script.id = "_bownow_cs_sid_757076642af3b3b48374";
-    script.innerHTML = `
-      var _bownow_cs_sid_757076642af3b3b48374 = document.createElement('script');
-      _bownow_cs_sid_757076642af3b3b48374.charset = 'utf-8';
-      _bownow_cs_sid_757076642af3b3b48374.src = 'https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js';
-      document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_757076642af3b3b48374);
-    `;
-
-    document.head.appendChild(script);
-  }, []);
-
+export default function ContactSection() {
   return (
-    <motion.div
-      ref={formWrapperRef}
-      className="w-full max-w-2xl mx-auto p-6 rounded-2xl shadow-lg bg-white"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-r from-navy to-navy-dark text-white"
     >
-      {/* BowNow sẽ tự inject form vào đây */}
-      <div id="sid_757076642af3b3b48374"></div>
-    </motion.div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Phần tiêu đề */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-noto">
+            お問い合わせ
+          </h2>
+          <p className="text-xl opacity-90">
+            無料相談・詳細情報をご希望の方は、今すぐご連絡ください。
+          </p>
+        </div>
+
+        {/* Container form */}
+        <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-xl">
+          <h3 className="text-2xl font-bold mb-6 font-noto text-white">
+            無料相談フォーム
+          </h3>
+          <div
+            id="sid_757076642af3b3b48374"
+            className="min-h-[600px] w-full bg-white/5 rounded-lg"
+          />
+        </div>
+      </div>
+
+      {/* Script BowNow */}
+      <Script
+        id="_bownow_cs_sid_757076642af3b3b48374"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var _bownow_cs_sid_757076642af3b3b48374 = document.createElement('script');
+            _bownow_cs_sid_757076642af3b3b48374.charset = 'utf-8';
+            _bownow_cs_sid_757076642af3b3b48374.src = 'https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js';
+            document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_757076642af3b3b48374);
+          `,
+        }}
+      />
+    </section>
   );
 }
