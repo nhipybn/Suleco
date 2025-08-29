@@ -5,10 +5,11 @@ import { MapPin } from "lucide-react";
 
 export default function ContactSection() {
   useEffect(() => {
-    // Gắn script BowNow nếu chưa tồn tại
-    if (!document.getElementById("_bownow_cs_sid_757076642af3b3b48374")) {
+    // Đảm bảo không gắn script nhiều lần
+    if (!document.getElementById("_bownow_loader")) {
       const script = document.createElement("script");
-      script.id = "_bownow_cs_sid_757076642af3b3b48374";
+      script.id = "_bownow_loader";
+      script.type = "text/javascript";
       script.charset = "utf-8";
       script.src =
         "https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js";
@@ -38,7 +39,7 @@ export default function ContactSection() {
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-            {/* Form BowNow sẽ được render vào đây */}
+            {/* Đây là div đích mà BowNow sẽ render form */}
             <div
               id="sid_757076642af3b3b48374"
               className="min-h-[600px] w-full"
