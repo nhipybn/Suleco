@@ -1,8 +1,21 @@
 "use client";
 
+import { useEffect } from "react";
 import { MapPin } from "lucide-react";
 
 export default function ContactSection() {
+  useEffect(() => {
+    // Gắn script BowNow nếu chưa tồn tại
+    if (!document.getElementById("_bownow_cs_sid_757076642af3b3b48374")) {
+      const script = document.createElement("script");
+      script.id = "_bownow_cs_sid_757076642af3b3b48374";
+      script.charset = "utf-8";
+      script.src =
+        "https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js";
+      document.head.appendChild(script);
+    }
+  }, []);
+
   return (
     <section
       id="contact"
@@ -21,23 +34,15 @@ export default function ContactSection() {
 
         {/* Grid 2 cột */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
           {/* Form BowNow – cột trái */}
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-            {/* Form nhúng bằng iframe để tránh lỗi */}
-            <div className="aspect-[9/12] w-full">
-              <iframe
-                src="https://form.bownow.jp/forms/sid_757076642af3b3b48374"
-                width="100%"
-                height="100%"
-                style={{ border: "none" }}
-                loading="lazy"
-                title="BowNow form"
-                className="w-full h-[600px] rounded-lg"
-              ></iframe>
-            </div>
+            {/* Form BowNow sẽ được render vào đây */}
+            <div
+              id="sid_757076642af3b3b48374"
+              className="min-h-[600px] w-full"
+            ></div>
           </div>
 
           {/* Thông tin liên hệ – cột phải */}
