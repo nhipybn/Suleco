@@ -27,16 +27,21 @@ export default function ContactSection() {
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-            {/* Container của BowNow */}
-            <div id="_bownow_cs_form_sid_757076642af3b3b48374"></div>
+            {/* Wrapper cố định chiều cao trước khi form load */}
+            <div className="min-h-[600px]">
+              <div id="_bownow_cs_form_sid_757076642af3b3b48374"></div>
+            </div>
 
             {/* Script nhúng BowNow */}
             <Script id="_bownow_cs_sid_757076642af3b3b48374" strategy="afterInteractive">
               {`
-                var _bownow_cs_sid_757076642af3b3b48374 = document.createElement('script');
-                _bownow_cs_sid_757076642af3b3b48374.charset = 'utf-8';
-                _bownow_cs_sid_757076642af3b3b48374.src = 'https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js';
-                document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_757076642af3b3b48374);
+                (function(){
+                  var s = document.createElement('script');
+                  s.charset = 'utf-8';
+                  s.src = 'https://contents.bownow.jp/forms/sid_757076642af3b3b48374/trace.js';
+                  var e = document.getElementById('_bownow_cs_form_sid_757076642af3b3b48374');
+                  if (e) e.parentNode.insertBefore(s, e);
+                })();
               `}
             </Script>
           </div>
