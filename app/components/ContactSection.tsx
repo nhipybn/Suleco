@@ -44,7 +44,6 @@ export default function ContactSection() {
 
           {/* Cột phải: Thông tin liên hệ */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 font-noto">お問い合わせ先</h3>
             <div className="space-y-6">
               {/* 本社 */}
               <div className="flex items-start space-x-4">
