@@ -8,14 +8,16 @@ export default function PartnerVideoSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4 font-noto">
             パートナーの声動画
           </h2>
-          <p className="text-xl text-gray-600">Sulecoのサービスをご利用いただいた企業の感想</p>
+          <p className="text-xl text-gray-600">
+            Sulecoのサービスをご利用いただいた企業の感想
+          </p>
         </div>
 
         <div className="flex justify-center">
           <iframe
             width="800"
             height="450"
-            src="https://youtu.be/Zlj7HmdJHYQ?si=MLpvhd5q1XsK8sgN" // Thay VIDEO_ID bằng link video thực tế
+            src="https://www.youtube.com/embed/Zlj7HmdJHYQ?si=MLpvhd5q1XsK8sgN"
             title="Cảm nhận của đối tác"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
