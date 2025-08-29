@@ -1,3 +1,4 @@
+
 "use client";
 
 import Script from "next/script";
@@ -20,36 +21,22 @@ export default function ContactSection() {
 
         {/* Grid 2 cột */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          {/* Cột trái: Video YouTube (đã sửa) */}
-          <div className="flex justify-center flex-col">
-            <h3 className="text-2xl font-bold font-noto mb-4">
-              お客様の声
-            </h3>
-            {/* Đây là vị trí bạn có thể đặt iframe video YouTube.
-                Tôi đã thay thế iframe của form bằng một iframe video mẫu. */}
-            <div className="aspect-w-16 aspect-h-9 w-full rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/your_video_id"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
+          {/* Cột trái: Video YouTube */}
+          <div className="flex justify-center">
+            <iframe allowtransparency="true" frameborder="0" height="800" id="_bownow_form_contents" scrolling="yes" src="https://contents.bownow.jp/forms/view?form_id=sid_757076642af3b3b48374 style="border: none; overflow: hidden; width: 100%; display: block;"> </iframe>
           </div>
 
-          {/* Cột phải: Form BowNow (đã sửa) */}
+          {/* Cột phải: Form BowNow */}
           <div className="bg-white rounded-2xl shadow-lg p-8 text-gray-900 flex flex-col justify-start">
             <h3 className="text-2xl font-bold mb-6 font-noto">無料相談フォーム</h3>
 
-            {/* Wrapper giữ vị trí form - Sửa ID theo yêu cầu của Bownow */}
+            {/* Wrapper giữ vị trí form */}
             <div
               className="relative w-full min-h-[400px]"
-              id="_bownow_form_sid_757076642af3b3b48374_root" // ID này cần khớp với script của bạn
+              id="_bownow_cs_form_sid_757076642af3b3b48374"
             ></div>
 
-            {/* Script BowNow - Sửa lại cú pháp cho Next.js */}
+            {/* Script BowNow */}
             <Script id="_bownow_cs_sid_757076642af3b3b48374" strategy="afterInteractive">
               {`
                 var _bownow_cs_sid_757076642af3b3b48374 = document.createElement('script');
