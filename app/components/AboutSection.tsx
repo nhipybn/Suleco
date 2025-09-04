@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section id="about" className="py-0 bg-white-50">
       <div className="max-w-[76rem] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex chia 2 cột */}
-        <div className="flex flex-col lg:flex-row gap-4 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-3 items-stretch">
           
           {/* Hình bên trái - chiều cao cố định */}
           <div className="lg:w-2/3 relative h-85">
