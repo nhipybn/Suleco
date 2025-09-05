@@ -30,7 +30,7 @@ export default function ContactSection() {
               height="800"
               id="_bownow_form_contents"
               scrolling="yes"
-              src="https://contents.bownow.jp/forms/view?form_id=sid_757076642af3b3b48374"
+              src="https://contents.bownow.jp/forms/view?form_id=sid_e864b022bd715c518685"
               style={{
                 border: "none",
                 overflow: "hidden",
